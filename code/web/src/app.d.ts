@@ -6,11 +6,7 @@ declare namespace App {
 	// interface PageData {}
 	// interface Error {}
 	interface Platform {
-				env: {
-					SETTINGS: KVNamespace;
-					CARDS: KVNamespace;
-					API_TOKEN: string;
-				};
+				env: {;};
 				context: {
 					waitUntil(promise: Promise<any>): void;
 				};
