@@ -7,7 +7,9 @@ declare namespace App {
 	// interface Error {}
 	interface Platform {
 				env: {
-					COUNTER: DurableObjectNamespace;
+					SETTINGS: KVNamespace;
+					CARDS: KVNamespace;
+					API_TOKEN: string;
 				};
 				context: {
 					waitUntil(promise: Promise<any>): void;
