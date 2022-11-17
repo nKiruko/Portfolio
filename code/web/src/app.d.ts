@@ -6,7 +6,8 @@ declare namespace App {
 	// interface PageData {}
 	// interface Error {}
 	interface Platform {
-				env: {;};
+				// eslint-disable-next-line @typescript-eslint/ban-types
+				env: {};
 				context: {
 					waitUntil(promise: Promise<any>): void;
 				};
