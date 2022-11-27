@@ -1,15 +1,21 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme")
+
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Roboto", defaultTheme.fontFamily.sans],
+        heading: ["Nunito", defaultTheme.fontFamily.sans],
+      },
       colors: {
         "darkbase": "#07050a",
       },
       keyframes: {
         dog: {
           '0%, 100%': { transform: 'rotateX(0deg)' },
-          '50%': { transform: 'rotateX(15deg)' },
+          '50%': { transform: 'rotateX(10deg)' },
         },
         dogTail: {
           '0%, 100%': { transform: 'scalex(1)' },
@@ -21,10 +27,13 @@ module.exports = {
         }
       },
       animation: {
-        wiggle: 'dog 1.5s ease-in-out infinite',
+        wiggle: 'dog 1s ease-in-out infinite',
         wiggle1: 'dogTail 1.5s ease-in-out infinite ',
         wiggle2: 'dogEar 2s ease-in-out infinite ',
       },
+      backgroundImage: {
+        'stars': "url('/static/stars.png')",
+      }
     },
   },
   plugins: [require("daisyui")],
