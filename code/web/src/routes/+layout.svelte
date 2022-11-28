@@ -11,7 +11,7 @@
 {/if}
 
 
-<main class="h-[70rem] font-sans bg-[url('/stars.png')] bg-top overflow-hidden">
+<main class="font-sans bg-[url('/stars.png')] bg-top bg-no-repeat">
   <slot />
 </main>
 

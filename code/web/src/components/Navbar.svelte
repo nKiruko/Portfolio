@@ -42,7 +42,6 @@
          <a class="{current === 'Home' ? 'tab tab-lg tab-active tab-bordered mx-5 px-2' : 'tab tab-lg tab-bordered mx-5 px-2'}"  on:click="{() => current = 'Home'}" href="/">Home</a>
          <a class="{current === 'About' ? 'tab tab-lg tab-active tab-bordered mx-5 px-2 ' : 'tab tab-lg tab-bordered mx-5 px-2'}"  on:click="{() => current = 'About'}" href="./about">About</a>
          <a class="{current === 'Contact' ? 'tab tab-lg tab-active tab-bordered mx-5 px-2 ' : 'tab tab-lg tab-bordered mx-5 px-2'}" on:click="{() => current = 'Contact'}" href="./contact">Contact</a>
-         <a class="tab tab-lg btn rounded-xl py-0 text-base-100 font-bold" href="/">Subscribe</a>
       </div>
 
       </div>
