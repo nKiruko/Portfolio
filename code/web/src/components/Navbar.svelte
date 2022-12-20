@@ -1,5 +1,5 @@
 <script lang="ts">
-
+   import { page } from '$app/stores';
    import Motion from 'svelte-motion/src/motion/MotionSSR.svelte'
 
    const variants = {
@@ -22,7 +22,8 @@
          },
       },
    };
-   let current = 'Home';
+
+   // console.log($page);
 </script>
 
 <Motion
@@ -39,9 +40,9 @@
       </div>
       <div class="flex-none lg:mr-72 md:mr-36">
       <div class="tabs font-bold">
-         <a class="{current === 'Home' ? 'tab tab-lg tab-active tab-bordered mx-5 px-2' : 'tab tab-lg tab-bordered mx-5 px-2'}"  on:click="{() => current = 'Home'}" href="/">Home</a>
-         <a class="{current === 'About' ? 'tab tab-lg tab-active tab-bordered mx-5 px-2 ' : 'tab tab-lg tab-bordered mx-5 px-2'}"  on:click="{() => current = 'About'}" href="./about">About</a>
-         <a class="{current === 'Contact' ? 'tab tab-lg tab-active tab-bordered mx-5 px-2 ' : 'tab tab-lg tab-bordered mx-5 px-2'}" on:click="{() => current = 'Contact'}" href="./contact">Contact</a>
+         <a class="{$page.route.id === "/" ? 'tab tab-lg tab-active tab-bordered mx-5 px-2' : 'tab tab-lg tab-bordered mx-5 px-2'}" href="/">Home</a>
+         <a class="{$page.route.id === "/about" ? 'tab tab-lg tab-active tab-bordered mx-5 px-2 ' : 'tab tab-lg tab-bordered mx-5 px-2'}" href="./about">About</a>
+         <a class="{$page.route.id === "/contact" ? 'tab tab-lg tab-active tab-bordered mx-5 px-2 ' : 'tab tab-lg tab-bordered mx-5 px-2'}"href="./contact">Contact</a>
       </div>
 
       </div>

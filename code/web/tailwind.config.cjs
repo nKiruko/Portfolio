@@ -33,6 +33,11 @@ module.exports = {
       },
       backgroundImage: {
         'stars': "url('/static/stars.png')",
+      },
+      screens: {
+
+        '2xl': '2560px',
+        // => @media (min-width: 1536px) { ... }
       }
     },
   },

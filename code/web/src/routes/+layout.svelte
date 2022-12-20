@@ -11,7 +11,7 @@
 {/if}
 
 
-<main class="font-sans bg-[url('/stars.png')] bg-top bg-no-repeat">
+<main class="font-sans">
   <slot />
 </main>
 
